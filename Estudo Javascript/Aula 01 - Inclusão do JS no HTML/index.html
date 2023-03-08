@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <!--Podemos incluir como um arquivo externo como no exemplo abaixo, ou direto no head (recomendado somente quando o código for pequeno, se for um código muito extenso, sempre devemos usar o arquivo externo para fins de organização)-->
+    <script src="js.js"></script>
+    <!-- Modelo interno:
+        <script> alert('Olá, seja bem vindo a primeira aula!')</script>
+    -->
+
+    <!--Temos que ter cuidado com script que deve ser executado depois do HTML ser carregado, para não ocorrer erros.-->
+ 
+</head>
+
+<body>
+    
+    <h1>Curso de javascript</h1>
+    <input type="text" placeholder="Teste de precedência" id="nome" disabled="disabled">
+    <script>document.getElementById('nome').value = 'Oi'</script>
+
+</body>
+
+</html>
