@@ -3,6 +3,9 @@
 //função: corresponde ao conteúdo dentro de um bloco de function
 //bloco: instruções contidas dentro de comandos como os " if "
 
+//Bloco faz variável global
+//Função não faz variável global
+
 var serie = "Friends"
 
 //Escopo de bloco
