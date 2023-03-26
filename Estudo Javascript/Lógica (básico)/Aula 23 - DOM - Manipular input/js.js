@@ -1,4 +1,4 @@
-function submit() {
+function distribuicao() {
     //Selecionar o valor digiado
     var caracter = document.getElementById("entrada").value
     //.value faz com que recupere o que é digitado
@@ -6,7 +6,7 @@ function submit() {
     //limpar o campo de digitação:
     document.getElementById("entrada").value = ''
 
-    //Limpar espaços em branco nas extermidades
+    //Limpar espaços em branco nas extremidades
     caracter.trim()
 
     switch(caracter) {
