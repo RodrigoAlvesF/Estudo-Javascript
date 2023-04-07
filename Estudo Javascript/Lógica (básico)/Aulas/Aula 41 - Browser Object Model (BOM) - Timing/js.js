@@ -4,7 +4,7 @@
 var  i = 5
     //se quisermos finalizar, devemos transformar a função em variável como abaixo
 
-    var x = setInterval(function() 
+    var x = setInterval (function() 
     {
         document.write(i + '<br/>')
         i--
