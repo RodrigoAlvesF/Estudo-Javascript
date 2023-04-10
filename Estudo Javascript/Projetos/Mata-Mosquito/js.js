@@ -14,6 +14,11 @@ ajustaTamanhoPalcoJogo()
 
 function posicaoRandomica(){
 
+    //remover o mosquito anterior (caso exista)
+    if (document.getElementById('mosquito')) {
+        document.getElementById('mosquito').remove()
+    }
+
     // Math.floor faz o arredondamento para baixo para tirar as casas decimais
     //Usamos o Math.random * o valor que queremos que seja o máximo do random.
     //Multiplicamos para que tenhamos valores "inteiros" e nunca passando dos limites da janela (necessário a multiplicação para usar o Math.floor)
@@ -37,6 +42,7 @@ function posicaoRandomica(){
     mosquito.style.left = posicaoX + 'px'
     mosquito.style.top = posicaoY + 'px' //Não esquecer de colocar os px
     mosquito.style.position = 'absolute' //absolute serve para "soltar" a imagem na tela
+    mosquito.id = 'mosquito'
 
     //para adicionarmos um elemento dentro de outro elemento, transformamos ele é uma variável
     document.body.appendChild(mosquito)
@@ -69,3 +75,4 @@ function ladoAleatorio() {
             return 'ladoB'
     }
 }
+
