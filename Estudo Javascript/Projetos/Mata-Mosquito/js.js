@@ -36,7 +36,7 @@ function posicaoRandomica(){
 
     //Cirar o elemento HTML
     var mosquito = document.createElement('img')
-    mosquito.src = 'imagens/mosca.png' // Para aparecer a mosca na função.
+    mosquito.src = 'imagens/mosquito.png' // Para aparecer a mosca na função.
     mosquito.className = tamanhoAleatorio() + ' ' + ladoAleatorio() //A função tamanhAleatório guarda 3 tipos de classes, a função ladoAleatorio guarda 2 classes.
     //OBS: devemos usar o espaçamento + ' ' + para que ambas funões sejam usadas. 
     mosquito.style.left = posicaoX + 'px'
