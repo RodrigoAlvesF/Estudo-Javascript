@@ -9,6 +9,8 @@ function ajustaTamanhoPalcoJogo(){
     console.log(largura, altura)
 }
 
+var vidas = 1
+
 ajustaTamanhoPalcoJogo()
 
 
@@ -17,7 +19,15 @@ function posicaoRandomica(){
     //remover o mosquito anterior (caso exista)
     if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove()
-    }
+
+        if (vidas > 3) {
+            alert('Game Over')
+        } else {
+            document.getElementById('v' + vidas).src='imagens/coracao_vazio.png' //Assim alteramos o coração do HTML
+
+            vidas++
+        }
+    } //Sempre que for feito um loop, vidas ganhará +1, acessando assim o id "v2" do html e assim continuando até a ultima vida.
 
     // Math.floor faz o arredondamento para baixo para tirar as casas decimais
     //Usamos o Math.random * o valor que queremos que seja o máximo do random.
@@ -43,6 +53,9 @@ function posicaoRandomica(){
     mosquito.style.top = posicaoY + 'px' //Não esquecer de colocar os px
     mosquito.style.position = 'absolute' //absolute serve para "soltar" a imagem na tela
     mosquito.id = 'mosquito'
+    mosquito.onclick = function () {
+        this.remove() //Como a função ta associada ao elemento html, podemos usar o "this" que faz referencia ao próprio elemento.
+    }
 
     //para adicionarmos um elemento dentro de outro elemento, transformamos ele é uma variável
     document.body.appendChild(mosquito)
