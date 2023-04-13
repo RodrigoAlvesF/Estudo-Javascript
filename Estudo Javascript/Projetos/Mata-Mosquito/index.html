@@ -20,15 +20,17 @@
                 <img id="v3" src="imagens/coracao_cheio.png" alt="">
             </div>
 
-            <div class="cronometro">Tempo restante:</div>
+            <div class="cronometro">Tempo restante: <span id="cronometro"></span></div>
         </div>
 
         <script>
             
+            document.getElementById('cronometro').innerHTML = tempo //adicionamos no html também para que o programa inicie já com o dado impresso
+
             /*Executar a cada 1000ms*/
-            setInterval(function() {
+            var criaMosquito = setInterval(function() {
                 posicaoRandomica()
-            }, 1000)
+            }, 2000)
         </script>
         
     </body>

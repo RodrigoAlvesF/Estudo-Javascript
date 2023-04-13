@@ -10,8 +10,22 @@ function ajustaTamanhoPalcoJogo(){
 }
 
 var vidas = 1
+var tempo = 5 //representando 10 segundos
 
 ajustaTamanhoPalcoJogo()
+
+var cronometro = setInterval(function() {
+    tempo -= 1 //cada loop diminuirá 1
+
+    if (tempo < 0 ) {
+        clearInterval (cronometro)
+        clearInterval (criaMosquito)
+        alert('Vitória!')
+    } else {
+        document.getElementById('cronometro').innerHTML = tempo //innerHTML é o valor contido entre as tags
+    }
+}, 1000)
+
 
 
 function posicaoRandomica(){
@@ -21,7 +35,7 @@ function posicaoRandomica(){
         document.getElementById('mosquito').remove()
 
         if (vidas > 3) {
-            window.location.href = 'fim.html'
+            window.location.href = 'fim.html' //criamos uma página de gameover
         } else {
             document.getElementById('v' + vidas).src='imagens/coracao_vazio.png' //Assim alteramos o coração do HTML
 
