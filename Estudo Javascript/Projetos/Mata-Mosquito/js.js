@@ -20,7 +20,8 @@ var cronometro = setInterval(function() {
     if (tempo < 0 ) {
         clearInterval (cronometro)
         clearInterval (criaMosquito)
-        alert('Vitória!')
+        //Usamos o clearInterval para limpar o loop quando o tempo for zerado
+        window.location.href = 'vitoria.html' //criamos uma página de vitoria
     } else {
         document.getElementById('cronometro').innerHTML = tempo //innerHTML é o valor contido entre as tags
     }
