@@ -10,7 +10,23 @@ function ajustaTamanhoPalcoJogo(){
 }
 
 var vidas = 1
-var tempo = 5 //representando 10 segundos
+var tempo = 15 //representando 10 segundos
+
+var criaMosquitoTempo = 1500
+
+var nivel = window.location.search //A propriedade href retorna a url inteira, usamos o search para recuperarmos tudo que está na interrogação
+nivel = nivel.replace('?', '') //A esquerda o que queremos alterar e a direita o que colocaremos no lugar
+
+if(nivel === 'normal') {
+    //1500ms
+    criaMosquitoTempo = 1500
+} else if (nivel === 'dificil') {
+    //1000ms
+    criaMosquitoTempo = 1000
+} else if (nivel === 'chucknorris') {
+    //750ms
+    criaMosquitoTempo = 750
+}
 
 ajustaTamanhoPalcoJogo()
 
