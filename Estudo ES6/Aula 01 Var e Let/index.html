@@ -1,0 +1,55 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ES6 - Babel</title>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel">
+            //3 escopos: global, função e bloco
+            //Var em Global está disponível para todos os escopos
+            //a função priva a variável de se tornar global
+            //Let faz com que a variável
+
+            var serie = 'friends'
+
+            function x() {
+                //Var na função, está disponível para a função e para os escopos que estiverem dentro da função
+                var serie = 'Game of Thrones'
+                console.log (serie)
+
+                if (true) {
+
+                    console.log(serie)
+
+                }
+
+            }
+
+            x()
+
+            if (true) {
+                //Se criarmos uma var dentor do escopo que está dentro de GLOBAL, sofrerá uma elevação e também será uma var global
+                console.log(serie)
+                }
+
+        
+            console.log('Abaixo utilizaremos let')
+
+            if (true) {
+                let serie2 = 'friends'
+                console.log(serie2)
+            }
+
+            //o serve serve para preservação de escopo, impedindo que se torne global, o console abaixo dará erro pois a serie2 foi criada em let.
+            console.log(serie2)
+
+        </script>
+
+    </head>
+    <body>
+        <div id="output">
+
+        </div>
+    </body>
+</html>
