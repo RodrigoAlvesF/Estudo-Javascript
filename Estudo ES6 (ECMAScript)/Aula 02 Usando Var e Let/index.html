@@ -1,0 +1,29 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ES6 - Var e let</title>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel">
+
+            var serie = ('friends')
+
+            {
+                var serie = ('The Walking Dead')
+                console.log ('dentro do bloco ' + serie)
+            }
+
+            console.log ('fora do bloco ' + serie)
+            
+            //Nessa situação, será impresso The Walking Dead tanto dentro do bloco quanto fora, pois ao usar var dentro do escopo, ainda sim se torna global.
+            //Caso usassemos LET dentor do escopo, seria impresso The Walking Dead somente dentro do escopo.
+        </script>
+
+    </head>
+    <body>
+        <div id="output">
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ES6 - Template string</title>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel">
+
+            let nome = 'Jorge'
+            console.log ('Oi ' + nome + ', tudo bem?') //Essa é a forma comum de concatenação
+
+            console.log(`Oi ${nome}, 
+            tudo bem?`) //Template string é usado desta forma (com $ e ``) e também pode ser usado quebra de linha que o código não irá corrigir
+
+            console.log (`7 + 7 = ${7+7}`) //Também é possível usar matemática da forma mostrada
+
+            function calcular(x, y) {
+                return x * y
+            }
+
+            console.log(`A multiplicação de 8 * 8 é ${calcular(8, 8)}`) // Também é possível usar função com parametros desta forma
+
+        </script>
+
+    </head>
+    <body>
+        <div id="output">
+
+        </div>
+    </body>
+</html>
