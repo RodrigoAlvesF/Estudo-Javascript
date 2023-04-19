@@ -1,0 +1,55 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ES6 - Arrow function</title>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel">
+
+            /*
+            let quadrado = function(x = '5') {
+                return x * x
+            }*/
+
+
+            /*
+            //O codigo abaixo funciona da mesma forma que o código acima
+            let quadrado = (x) => {
+                return x * x
+            }*/
+
+            //se usarmos um único parametro, podemos dispensar o abre e fecha parenteses:
+            let quadrado = x => x * x //Se usarmos somente um retorno, podemos dispensar o return e os colchetes
+
+            //Para puxarmos uma função dentro de uma variável, usamos a variável e os parenteses que significa a execução da função que está dentro
+            document.write( quadrado(3), '<br/>')
+
+            /*
+            let parImpar = function (numero) {
+                
+                if (numero % 2 === 0) {
+                    return 'par'
+                } else {
+                    return 'impar'
+                }
+            }*/
+
+            //Abaixo como essa função ficará em arrow function e com if ternário
+            //a interrogação representa o true, os dois pontos representam o else (false)
+            //se numero mod 2 for indentico a zero, então par, se não, impar
+            let parImpar = numero => numero % 2 === 0 ? 'par' : 'impar'
+
+            document.write(parImpar(4))
+
+
+
+        </script>
+
+    </head>
+    <body>
+        <div id="output">
+
+        </div>
+    </body>
+</html>
