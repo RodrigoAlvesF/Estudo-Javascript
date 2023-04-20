@@ -1,0 +1,64 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Orientação a Objetos - Pilar da Abstração</title>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel">
+
+            //Modelo da objeto
+            class ContaBancaria {
+                //agencia
+                //numeroConta
+                //saldo
+                //limite
+
+                //No construtor definimos os atributos
+                constructor() {
+                    //Usamos o this para conectar o atributo com a classe
+                    this.agencia = 1075
+                    this.numeroConta = 8351125
+                    this.saldo = 50
+                    this.limite = 450
+                }
+
+                //O próximo passo é identificar as ações
+                depositar(valorDeposito) {
+                    this.saldo += valorDeposito //iremos pegar o valor que esta em saldo e somar com o valor de deposito
+                }
+
+                sacar(valorSaque) {
+                    this.saldo -= valorSaque //iremos pegar o valor que esta em saldo e substrair com o valor de saque
+                }
+
+                consultarSaldo(){
+                    return this.saldo
+                }
+            }
+
+            //new é o operador que indica que queremos tranformar a class em um objeto/entidade
+            let x = new ContaBancaria()
+            let y = new ContaBancaria()
+
+            //o ponto nos permite acessar atributos e metodos dos objetos (lembrando que o metodo é semelhante a função, precisamos usar parenteses)
+            console.log (x.consultarSaldo())
+
+            x.depositar(450)
+            console.log (x.consultarSaldo())
+
+            x.sacar(200)
+            console.log (x.consultarSaldo())
+
+            //O objeto Y permanecem inalterados mesmo que usem a mesma class
+            console.log (y.consultarSaldo())
+        
+        </script>
+
+    </head>
+    <body>
+        <div id="output">
+
+        </div>
+    </body>
+</html>
