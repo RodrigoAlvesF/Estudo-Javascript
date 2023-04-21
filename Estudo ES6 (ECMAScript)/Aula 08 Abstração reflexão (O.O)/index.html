@@ -1,0 +1,99 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Orientação a Objetos - Pilar da Abstração</title>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel">
+
+            //um software de marcenaria
+            //cadeira e sofá
+
+            //paradigma procedural
+
+            //cadeira
+    
+            /*
+            let qtdePernas = 4
+            let giratoria = false
+            let cor = 'azul'
+
+            //array de cadeiras
+            let cadeiras = Array()
+           
+            cadeiras [0] = Array()
+            cadeiras [0] ['qtdePernas'] = 4
+            cadeiras [0] ['giratoria'] = false
+            cadeiras [0] ['cor'] = 'azul'
+
+            cadeiras [1] = Array()
+            cadeiras [1] ['qtdePernas'] = 1
+            cadeiras [1] ['giratoria'] = true
+            cadeiras [1] ['cor'] = 'vermelha'
+            
+
+            function girarCadeira(indice) {
+                if(cadeiras[indice]['giratoria'] === true) {
+                    console.log('Cadeira é giratória')
+                } else {
+                    console.log('Cadeira não é giratória')
+                }
+            }
+
+            function adicionarCadeira (qtdePernas, giratoria, cor) {
+                let cadeira = Array()
+
+                cadeira['qtdePernas'] = qtdePernas
+                cadeira['giratoria'] = giratoria
+                cadeira ['cor'] = cor
+
+                cadeiras.push(cadeira)
+            }
+
+            adicionarCadeira(3, false, 'verde')
+            console.log(cadeiras)
+
+            //girarCadeira(1)
+            */
+
+
+            //paradigma de OO
+            class Cadeira {
+                constructor(qtdePernas, giratoria, cor) {
+                this.qtdePernas = qtdePernas
+                this.giratoria = giratoria
+                this.cor = cor
+             }
+             
+             girar_cadeira () {
+                    if(this.giratoria === true) {
+                        console.log('Cadeira é giratória')
+                    } else {
+                        console.log('Cadeira não é giratória')
+                    }
+                }
+            }
+
+            /*
+            let cadeira = new Cadeira (4, false, 'azul') // atenção nos maiusculo e minusculo
+            let cadeira2 = new Cadeira (1, true, 'vermelha')
+            */
+
+            //Também é possível usarmos da seguinte forma:
+            let cadeiras = Array()
+            cadeiras.push(new Cadeira(4, false, 'azul'))
+            cadeiras.push(new Cadeira(1, true, 'vermelha'))
+
+            console.log(cadeiras)
+            //cadeira2.girar_cadeira()
+
+        </script>
+
+    </head>
+    <body>
+        <div id="output">
+
+        </div>
+    </body>
+</html>
