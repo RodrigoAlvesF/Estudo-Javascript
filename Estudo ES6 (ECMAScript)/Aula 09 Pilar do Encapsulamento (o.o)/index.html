@@ -1,0 +1,43 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Orientação a Objetos - Pilar da Abstração</title>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel">
+            //vamos praticar a ideia do encapsulamento, usando uma TV
+            class Tv {
+                constructor () {
+                    //abaixo teremos os atributos da tv
+                    this._relacaoCanais = Array(2, 4, 5, 7, 10) //canais disponíveis
+                    this._canalAtivo = 5
+                    this._volume = 5
+                }
+                //getters e setters são mt utilizados dentro de classe para recuperar conteúdo privado (com _), funcionam como uma função:
+                get canalAtivo() { //get serve para recuperar o valor
+                    return this._canalAtivo
+                }
+
+                set canalAtivo(canal){ //set serve para alterar um valor
+                    //criamos um controle de segurança para saber se o canal deve ser exibido
+                    if (this._relacaoCanais.indexOf(canal) !== -1) {//indexof serve para localizar a posição do conteúdo e verificarmos se o conteúdo existe, caso não exista, retornará '-1'
+                        this._canalAtivo = canal
+                    }
+                }
+            }
+
+            //podemos criar uma instancia da tv/objeto:
+            let tv = new Tv()
+            tv.canalAtivo = 1
+            console.log(tv.canalAtivo)
+
+        </script>
+
+    </head>
+    <body>
+        <div id="output">
+
+        </div>
+    </body>
+</html>
