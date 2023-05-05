@@ -1,43 +1,63 @@
+<!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Orientação a Objetos - Pilar de encapsulamento</title>
+        <!-- Inclusão da biblioteca do Babel para compilação do código JavaScript -->
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <script type="text/babel">
-            //vamos praticar a ideia do encapsulamento, usando uma TV
+            // Definição da classe TV
             class Tv {
                 constructor () {
-                    //abaixo teremos os atributos da tv
-                    this._relacaoCanais = Array(2, 4, 5, 7, 10) //canais disponíveis
-                    this._canalAtivo = 5
-                    this._volume = 5
-                }
-                //getters e setters são mt utilizados dentro de classe para recuperar conteúdo privado (com _), funcionam como uma função:
-                get canalAtivo() { //get serve para recuperar o valor
-                    return this._canalAtivo
+                    // Definição dos atributos da classe TV
+                    // Criação de um array com os canais disponíveis
+                    this._relacaoCanais = Array(2, 4, 5, 7, 10);
+                    // Definição do canal ativo
+                    this._canalAtivo = 5;
+                    // Definição do volume inicial
+                    this._volume = 5;
                 }
 
-                set canalAtivo(canal){ //set serve para alterar um valor
-                    //criamos um controle de segurança para saber se o canal deve ser exibido
-                    if (this._relacaoCanais.indexOf(canal) !== -1) {//indexof serve para localizar a posição do conteúdo e verificarmos se o conteúdo existe, caso não exista, retornará '-1'
-                        this._canalAtivo = canal
-                    }
-                }
+                            // Definição do getter canalAtivo
+            get canalAtivo() {
+                // Retorna o valor do canal ativo
+                return this._canalAtivo;
             }
 
-            //podemos criar uma instancia da tv/objeto:
-            let tv = new Tv()
-            tv.canalAtivo = 1
-            console.log(tv.canalAtivo)
+            // Definição do setter canalAtivo
+            set canalAtivo(canal){
+                // Criação de um controle de segurança para verificar se o canal deve ser exibido
+                if (this._relacaoCanais.indexOf(canal) !== -1) {
+                    // Caso o canal exista na relação de canais disponíveis, o valor é atualizado
+                    this._canalAtivo = canal;
+                }
+            }
+        }
 
-        </script>
+        // Criação de uma instância da classe TV
+        let tv = new Tv();
 
-    </head>
-    <body>
-        <div id="output">
+        // Alteração do canal ativo para o canal 1
+        tv.canalAtivo = 1;
 
-        </div>
-    </body>
+        // Impressão do canal ativo no console
+        console.log(tv.canalAtivo);
+    </script>
+</head>
+<body>
+    <div id="output">
+    </div>
+</body>
+
 </html>
+<!--
+Este código HTML contém um script JavaScript que define uma classe chamada "Tv", que é usada para simular uma TV. O objetivo do código é ilustrar a ideia de encapsulamento na programação orientada a objetos.
+
+O código possui comentários que explicam cada parte do script. Na definição da classe, há um construtor que define os atributos da TV, incluindo a relação de canais disponíveis, o canal ativo e o volume.
+
+Em seguida, há a definição de dois métodos: o getter "canalAtivo", que recupera o valor do canal ativo, e o setter "canalAtivo", que altera o valor do canal ativo, mas somente se o canal existir na relação de canais disponíveis.
+
+Finalmente, o código cria uma instância da classe Tv, altera o canal ativo para o canal 1 e imprime o valor do canal ativo no console.
+-->
