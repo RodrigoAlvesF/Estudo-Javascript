@@ -59,3 +59,19 @@ papagaio.voar()
 let avestruz = new Avestruz()
 avestruz.enterrarCabeça()
 avestruz.voar()
+
+//Resumo da aula:
+
+/*
+
+
+Neste código, estamos utilizando o conceito de herança e polimorfismo em classes. Primeiro, temos a classe "Animal" que é a classe pai/superclasse, contendo o construtor com os atributos de cor, tamanho e peso, e um método "dormir". 
+
+Em seguida, temos a classe "Passaro" que herda os atributos e métodos da classe Animal, utilizando o operador "extends". A classe "Passaro" também possui o seu próprio construtor, com um novo atributo "bico" e um método "voar".
+
+A classe "Papagaio" é uma classe filha de "Passaro", que herda os atributos e métodos da classe "Passaro". "Papagaio" também possui seu próprio construtor, com um novo atributo "sabeFalar" e um método "falar".
+
+Por fim, temos a classe "Avestruz" também filha de "Passaro", que herda seus atributos e métodos. "Avestruz" tem um construtor sem parâmetros, com valores pré-definidos para o "bico", cor, tamanho e peso. "Avestruz" também possui um método "enterrarCabeça" e um método "voar", que foi sobreposto com um valor "false", indicando que as avestruzes não voam.
+
+No final, são criados objetos das classes "Papagaio" e "Avestruz" e alguns métodos são chamados para mostrar o comportamento desses objetos.
+*/
